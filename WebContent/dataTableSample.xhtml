@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+    <f:view>
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=Windows-31J" />
+            <title>データテーブル</title>
+        </h:head>
+        <h:body>
+            <h:form id="sampleForm">
+                <h:dataTable var="recordData" value="#{dataTableSample.dataList}" border="1" cellspacing="0">
+                    <h:column>
+                        <f:facet name="header">
+                            コード
+                        </f:facet>
+                        <h:commandLink value="#{recordData.code}"
+                            action="#{dataTableScope.init(recordData.code, recordData.name, recordData.price)}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            商品名
+                        </f:facet>
+                        <h:outputText value="#{recordData.name}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            価格
+                        </f:facet>
+                        <h:outputText value="#{recordData.price}" />
+                        <f:facet name="footer">
+                            価格フッター
+                        </f:facet>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </h:body>
+    </f:view>
+</html> 

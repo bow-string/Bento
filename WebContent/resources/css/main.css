@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* fontSize
+-----------------------------------------*/
+.fontS { font-size: 20% }
+.fontM { font-size: 65% }
+.fontL { font-size: 95% }
+ 
+ 
+/* mod_headerbox_size
+-----------------------------------------*/
+.mod_headerbox_size {
+  width: 90px;
+  position:relative;
+  overflow:hidden;
+}
+.mod_headerbox_size ul {
+}
+.mod_headerbox_size ul li {
+  float: left;
+  width:30px;
+  height: 30px;
+  overflow: hidden;
+}
+.mod_headerbox_size ul li span {
+  display: block;
+  cursor: pointer;
+}
+.mod_headerbox_size ul li.active span {
+  margin-top: -30px;
+}
+.mod_headerbox_size ul li span:hover{
+    margin-top:-30px;
+}
